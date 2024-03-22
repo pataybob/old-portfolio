@@ -1,0 +1,60 @@
+@font-face {
+	font-family: 'VT323'; 
+	src: url(/fonts/VT323-Regular.ttf)
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor:none;
+}
+
+a{
+    text-decoration: none; 
+    color: rgb(126, 125, 125);
+}
+
+.hello__main{
+    font-size: 30px;
+}
+
+body{
+    font-family: 'VT323', monospace;
+    font-size: 26px;
+    text-align: center;
+    margin-top: 20%;
+}
+/*------------------------------CURSOR--------------------*/
+.cursor{
+    position: fixed;
+    background: #000000;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    user-select: none;
+    pointer-events: none;
+    z-index: 3;
+    transform: scale(1);
+    transition: 0.3s cubic-bezier(0.75, -1.27 , 0.3 , 2.33) transform;
+
+}
+.cursor:active{
+    transform:scale(0);
+}
+.follower{
+    position: fixed;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #000000;
+    border-radius: 100%;
+    pointer-events: none;
+    user-select: none;
+    z-index: 3;
+    transition: 0.6s cubic-bezier(0.75, -1.27 , 0.3 , 2.33) transform, 0.2s cubic-bezier(0.75 , -0.27 , 0,3 , 1.33) opacity , 0.2s cubic-bezier(0.75 , -0.27 , 0,3 , 1.33) background;
+    transform: translate(2px,2px);
+}
+.follower:active{
+    transform:scale(2);
+    background: #dc11f7;
+
+}
